@@ -207,11 +207,15 @@ Add dashboard screenshots here.
 
 Example:
 
-![Dashboard Overview](dashboard_overview.png)
+<img width="1352" height="573" alt="Screenshot 2026-05-31 124253" src="https://github.com/user-attachments/assets/cd07f1c0-ad08-4c2c-8130-6cb060284a24" />
 
-![Regional Analysis](regional_analysis.png)
 
-![Customer Insights](customer_insights.png)
+<img width="1348" height="570" alt="Screenshot 2026-05-31 124341" src="https://github.com/user-attachments/assets/00ba50b6-20aa-4a74-b4fb-a78021e7d404" />
+
+<img width="1350" height="519" alt="Screenshot 2026-05-31 124417" src="https://github.com/user-attachments/assets/772199a9-35c6-4c5b-b830-c49dca564719" />
+
+
+
 
 ---
 
