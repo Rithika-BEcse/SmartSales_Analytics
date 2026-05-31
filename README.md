@@ -1,67 +1,301 @@
 # SmartSales Analytics
 
-SmartSales Analytics is a sales performance and business insights project for retail and e-commerce data. It includes a data cleaning script, SQL analytics queries, and Power BI dashboard design documentation.
+## Overview
 
-## Project Contents
-- `data/` - raw and cleaned datasets
-- `scripts/` - Python data cleaning script
-- `sql/` - SQL queries for analytics
-- `docs/` - project documentation and dashboard design
+SmartSales Analytics is an end-to-end Sales Analytics and Business Intelligence project designed to transform raw sales data into meaningful business insights.
+
+The project demonstrates the complete analytics workflow, including:
+
+* Data Cleaning and Preprocessing using Python
+* Exploratory Data Analysis (EDA)
+* SQL-Based Business Analytics
+* KPI and Performance Analysis
+* Power BI Dashboard Design
+* Business Insight Reporting
+
+The objective is to help organizations monitor sales performance, identify profitable products, understand customer behavior, and support data-driven decision-making.
+
+---
+
+## Business Problem
+
+Businesses generate large amounts of sales data every day. Without proper analysis, it becomes difficult to identify:
+
+* Revenue growth trends
+* High-performing products
+* Profitable customer segments
+* Regional sales performance
+* Business risks and opportunities
+
+This project addresses these challenges by building a complete analytics solution from raw data to executive-level reporting.
+
+---
+
+## Project Objectives
+
+* Clean and standardize raw sales data
+* Generate business-ready datasets
+* Analyze revenue and profit trends
+* Identify top-performing products and categories
+* Evaluate regional sales performance
+* Perform customer contribution analysis
+* Design a Power BI dashboard for management reporting
+
+---
+
+## Technology Stack
+
+| Technology | Purpose                    |
+| ---------- | -------------------------- |
+| Python     | Data Cleaning & Processing |
+| Pandas     | Data Manipulation          |
+| NumPy      | Numerical Operations       |
+| SQL        | Business Analytics Queries |
+| Excel      | Data Export                |
+| Power BI   | Dashboard Development      |
+| GitHub     | Project Version Control    |
+
+---
+
+## Project Architecture
+
+### Data Flow
+
+1. Raw sales data is collected.
+2. Python scripts clean and standardize the data.
+3. Cleaned datasets are exported to CSV and Excel.
+4. SQL queries generate business insights.
+5. Power BI uses the cleaned dataset for dashboard creation.
+6. Insights are documented for business review.
+
+---
+
+## Project Structure
+
+```text
+SmartSales_Analytics/
+│
+├── data/
+│   ├── SmartSales_Sales_Data.csv
+│   ├── SmartSales_Sales_Data_Cleaned.csv
+│   └── SmartSales_Sales_Data_Cleaned.xlsx
+│
+├── scripts/
+│   ├── data_cleaning.py
+│   └── eda.py
+│
+├── sql/
+│   └── SmartSales_Analytics_queries.sql
+│
+├── docs/
+│   ├── project_architecture.md
+│   ├── business_insights.md
+│   ├── data_dictionary.md
+│   ├── eda_report.md
+│   ├── powerbi_dashboard_design.md
+│   └── project_summary.md
+│
+├── reports/
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
+---
+
+## Dataset Description
+
+The dataset contains retail and e-commerce sales information including:
+
+* Order Details
+* Customer Information
+* Product Information
+* Geographic Data
+* Sales Revenue
+* Profit Metrics
+* Sales Channels
+* Order Status
+
+### Key Fields
+
+| Field            | Description             |
+| ---------------- | ----------------------- |
+| order_id         | Unique order identifier |
+| order_date       | Date of purchase        |
+| customer_id      | Customer identifier     |
+| customer_name    | Customer name           |
+| region           | Sales region            |
+| country          | Customer country        |
+| product_category | Product category        |
+| product_name     | Product name            |
+| units_sold       | Quantity sold           |
+| revenue          | Total revenue           |
+| profit           | Total profit            |
+| channel          | Sales channel           |
+| profit_margin    | Profitability indicator |
+
+---
+
+## Data Cleaning Process
+
+The Python data cleaning pipeline performs:
+
+* Duplicate removal
+* Missing value handling
+* Date format standardization
+* Text standardization
+* Revenue recalculation
+* Profit recalculation
+* Derived field generation
+
+Output files:
+
+* SmartSales_Sales_Data_Cleaned.csv
+* SmartSales_Sales_Data_Cleaned.xlsx
+
+---
+
+## Exploratory Data Analysis (EDA)
+
+The EDA process includes:
+
+* Revenue Analysis
+* Profit Analysis
+* Customer Analysis
+* Product Analysis
+* Regional Performance Analysis
+* Monthly Trend Analysis
+
+Generated outputs are stored in the `reports/` directory.
+
+---
+
+## SQL Analytics
+
+The SQL module includes business-focused queries such as:
+
+* Monthly Revenue Analysis
+* Profit Performance
+* Top Products
+* Top Customers
+* Regional Comparison
+* Category Performance
+* KPI Evaluation
+
+---
+
+## Power BI Dashboard
+
+The dashboard is designed for executive and management-level reporting.
+
+### Dashboard Sections
+
+* Executive Summary
+* Revenue Performance
+* Profit Analysis
+* Regional Performance
+* Product Insights
+* Customer Insights
+* Business Risk & Opportunity Analysis
+
+---
+
+## Dashboard Preview
+
+Add dashboard screenshots here.
+
+Example:
+
+![Dashboard Overview](dashboard_overview.png)
+
+![Regional Analysis](regional_analysis.png)
+
+![Customer Insights](customer_insights.png)
+
+---
+
+## Key Business Insights
+
+Some of the insights generated include:
+
+* Monthly revenue growth patterns
+* High-profit product categories
+* Top revenue-generating customers
+* Regional sales performance comparison
+* Customer contribution analysis
+* Profitability benchmarking
+
+---
 
 ## Getting Started
-1. Install Python 3.9+.
-2. Create and activate a virtual environment (recommended):
-   ```powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
-3. Install project dependencies:
-   ```powershell
-   python -m pip install -r requirements.txt
-   ```
-4. Run the cleaning script:
-   ```powershell
-   python scripts\data_cleaning.py
-   ```
-   Or use optional path arguments:
-   ```powershell
-   python scripts\data_cleaning.py --input data\SmartSales_Sales_Data.csv --output-csv data\SmartSales_Sales_Data_Cleaned.csv --output-xlsx data\SmartSales_Sales_Data_Cleaned.xlsx
-   ```
-5. Perform exploratory data analysis:
-   ```powershell
-   python scripts\eda.py
-   ```
-   This generates summary tables and charts in the `reports/` folder.
+
+### Clone Repository
+
+```bash
+git clone https://github.com/yourusername/SmartSales_Analytics.git
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run Data Cleaning
+
+```bash
+python scripts/data_cleaning.py
+```
+
+### Run EDA
+
+```bash
+python scripts/eda.py
+```
+
+---
 
 ## Outputs
-- `data/SmartSales_Sales_Data_Cleaned.csv`
-- `data/SmartSales_Sales_Data_Cleaned.xlsx`
 
-## Dashboard Design
-- The project includes a Power BI dashboard design in `docs/powerbi_dashboard_design.md`.
-- It defines an executive summary page, regional and category performance visuals, customer/product insights, and business risk/opportunity analysis.
+Generated outputs include:
 
-## Live Demo
-This project was executed successfully using `scripts/data_cleaning.py` and `scripts/eda.py`. The current run generated cleaned dataset outputs and EDA artifacts in the `reports/` folder.
+* Cleaned CSV Dataset
+* Cleaned Excel Dataset
+* EDA Reports
+* Charts and Visualizations
+* SQL Analytics Results
+* Power BI Dashboard
 
-## Local Dashboard Website
-Open `reports/index.html` in your browser to view the static dashboard website with a navigation panel and multiple pages.
+---
 
 ## Documentation
-- See `docs/README.md` for full project overview and usage.
-- See `docs/project_architecture.md` for architecture and data flow.
-- See `docs/powerbi_dashboard_design.md` for dashboard planning.
-- See `docs/business_insights.md` for business insights.
-- See `docs/eda_report.md` for exploratory data analysis findings.
-- See `docs/data_dictionary.md` for dataset definitions.
-- See `docs/project_summary.md` for the project story and business value.
 
-## Development and Testing
-- Install dev dependencies:
-  ```powershell
-  python -m pip install -r requirements-dev.txt
-  ```
-- Run unit tests:
-  ```powershell
-  pytest tests
-  ```
+Additional project documentation is available in the `docs/` folder:
+
+* Project Architecture
+* Data Dictionary
+* EDA Report
+* Business Insights
+* Dashboard Design
+* Project Summary
+
+---
+
+## Future Enhancements
+
+* Automated ETL Pipeline
+* Real-Time Dashboard Integration
+* Sales Forecasting using Machine Learning
+* Customer Segmentation Models
+* Advanced KPI Monitoring
+
+---
+
+## Author
+
+**Rithika L**
+
+BE (Computer Science)
+
+Sales Analytics | Business Intelligence | Data Analytics Projects
